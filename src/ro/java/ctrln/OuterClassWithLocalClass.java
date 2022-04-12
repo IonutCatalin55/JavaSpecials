@@ -8,11 +8,12 @@ public class OuterClassWithLocalClass {
     public void showMessages() {
         class LocalClass {
             private int nextIndex = 0;
+            // enum  Weekday {Monday}; NU PUTEM DECLARA UN ENUMS IN INTERIORUL UNEI CLASE LOCALE
 
             public boolean hasNext() {
                 //return (this.nextIndex <= SIZE - 1); cod original
                 return (this.nextIndex <= messageList.length - 1); //Refactorizare Nu mai suntem conditionati de SIZE codul este mult mai dinamic
-                                                                    // si se adapteaza lungimi vectorului
+                // si se adapteaza lungimi vectorului
             }
 
             public String next() {

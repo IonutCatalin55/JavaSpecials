@@ -1,12 +1,14 @@
 package ro.java.ctrln;
 
 public class  OuterClass {
-
+    enum  Weekday {Monday};
     private final static int SIZE = 5;
     private String[] messageList = {"Message1", "Message2", "Message3", "Message4", "Message5"};
 
     private class InnerClass {
         private int nextIndex = 0;
+
+        //enum  Weekday {Monday};   NU PUTEM DECLARA ENUMS IN INTERIORUL CLASELOR INTERIOARE
 
         public boolean hasNext() {
             //return (this.nextIndex <= SIZE - 1);cod original
@@ -34,4 +36,5 @@ public class  OuterClass {
         outerClass.showMessages();
         //InnerClass innerClass = new InnerClass(); // NU PUTEM FOLOSI O CLASA NON-STATICA INTR UN CONTEXT STATIC
     }
+    Weekday weekday = Weekday.Monday;
 }
